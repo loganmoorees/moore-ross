@@ -1,9 +1,9 @@
 package com.moore.web;
 
-import com.moore.constant.enums.ResponseCode;
+import com.moore.common.enums.ResponseCode;
+import com.moore.common.utils.Result;
 import com.moore.model.vo.MenuVO;
 import com.moore.service.MenuService;
-import com.moore.utils.Result;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

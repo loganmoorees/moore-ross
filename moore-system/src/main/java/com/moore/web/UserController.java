@@ -1,9 +1,9 @@
 package com.moore.web;
 
-import com.moore.constant.enums.ResponseCode;
+import com.moore.common.enums.ResponseCode;
+import com.moore.common.utils.Result;
 import com.moore.model.entity.UserEntity;
 import com.moore.service.UserService;
-import com.moore.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

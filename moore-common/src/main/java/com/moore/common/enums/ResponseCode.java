@@ -1,6 +1,6 @@
-package com.moore.constant.enums;
+package com.moore.common.enums;
 
-public enum  ResponseCode {
+public enum ResponseCode {
     SUCCESS(200, "成功"),
     /* 失败状态码 */
     FAILURE(0, "失败"),

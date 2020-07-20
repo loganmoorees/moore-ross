@@ -1,4 +1,4 @@
-package com.moore.utils;
+package com.moore.common.utils;
 
 import java.beans.BeanInfo;
 import java.beans.Introspector;
