@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: moore-gateway
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: moore
+    url: jdbc:mysql://49.235.208.185:3307/manager?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT
 
 zuul:
   host:
@@ -13,6 +18,13 @@ zuul:
       customSensitiveHeaders: true
       serviceId: moore-data
       path: /product/**
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  type-aliases-package: com.moore.model.entity
+  global-config:
+    db-config:
+      id-type: auto
 
 eureka:
   client:

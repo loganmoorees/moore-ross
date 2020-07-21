@@ -1,10 +1,11 @@
 package com.moore.filter;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
 
 @Configuration
 public class AuthFilter extends ZuulFilter {
@@ -32,7 +33,10 @@ public class AuthFilter extends ZuulFilter {
      */
     @Override
     public Object run() throws ZuulException {
-        System.out.println("----------------进入-----------------");
+        System.out.println("----------------进入网关-----------------");
+        // 获取上下文以及Request
+        RequestContext context = RequestContext.getCurrentContext();
+        HttpServletRequest request = context.getRequest();
         return null;
     }
 }
