@@ -11,6 +11,7 @@
         <module>moore-system</module>
         <module>moore-data</module>
         <module>moore-common</module>
+        <module>moore-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -26,7 +27,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <mybatis-spring.version>2.1.3</mybatis-spring.version>
-        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
         <mysql.version>6.0.6</mysql.version>
         <mybatis-plus.version>3.2.0</mybatis-plus.version>
         <jwt.version>3.10.0</jwt.version>
@@ -47,10 +48,8 @@
             <!-- Spring Cloud -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+                <version>${springboot.version}</version>
             </dependency>
             <!-- jwt -->
             <dependency>
@@ -78,7 +77,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-            <version>${springboot.version}</version>
+            <version>${spring-cloud.version}</version>
         </dependency>
         <!-- Dev Tools -->
         <dependency>
@@ -137,6 +136,12 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.3.9</version>
+        </dependency>
+        <!-- eureka -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <version>${spring-cloud.version}</version>
         </dependency>
     </dependencies>
 

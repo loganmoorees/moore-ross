@@ -2,6 +2,8 @@ server:
     port: 8075
 
 spring:
+    application:
+        name: moore-data
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
@@ -14,3 +16,9 @@ mybatis-plus:
     global-config:
         db-config:
             id-type: auto
+eureka:
+    client:
+        service-url:
+            defaultZone: http://49.235.208.185:8099/eureka/
+        fetch-registry: true
+        register-with-eureka: true

@@ -1,0 +1,22 @@
+server:
+  port: 8088
+
+spring:
+  application:
+    name: moore-gateway
+
+zuul:
+  host:
+    connect-timeout-millis: 2000
+  routes:
+    product-service:
+      customSensitiveHeaders: true
+      serviceId: moore-data
+      path: /product/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://49.235.208.185:8099/eureka/
+    fetch-registry: true
+    register-with-eureka: true
