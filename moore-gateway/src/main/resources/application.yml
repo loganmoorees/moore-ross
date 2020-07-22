@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: moore-gateway
+    name: mooreGateway
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
@@ -14,10 +14,20 @@ zuul:
   host:
     connect-timeout-millis: 2000
   routes:
-    product-service:
+    product:
       customSensitiveHeaders: true
-      serviceId: moore-data
+      serviceId: mooreSdata
       path: /product/**
+      strip-prefix: false
+#    login:
+#      customSensitiveHeaders: true
+#      serviceId: mooreGateway
+#      path: /login
+#      strip-prefix: false
+
+ribbon:
+  ReadTimeout: 120000
+  ConnectTimeout: 30000
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml

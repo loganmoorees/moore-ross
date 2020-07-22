@@ -3,7 +3,7 @@ server:
 
 spring:
     application:
-        name: moore-data
+        name: mooreSdata
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: root

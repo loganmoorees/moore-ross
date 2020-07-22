@@ -17,7 +17,7 @@ import java.util.List;
  * @author Moore
  */
 @RestController
-@RequestMapping("product")
+@RequestMapping("/product")
 public class ProductTypeController {
 
     /**
@@ -26,7 +26,7 @@ public class ProductTypeController {
     @Autowired
     ProductTypeService productTypeService;
 
-    @GetMapping("type")
+    @GetMapping("/type")
     public Result getProductTypeMenu() {
         List<SeriesVo> productTypeMenu = productTypeService.getProductTypeMenu();
         return Result.success(ResponseCode.SUCCESS, productTypeMenu);
