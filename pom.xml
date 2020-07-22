@@ -8,7 +8,6 @@
     <artifactId>moore-ross</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>moore-system</module>
         <module>moore-data</module>
         <module>moore-common</module>
         <module>moore-gateway</module>

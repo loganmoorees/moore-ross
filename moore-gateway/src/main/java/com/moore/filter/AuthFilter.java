@@ -72,14 +72,14 @@ public class AuthFilter extends ZuulFilter {
         if (id == null) {
             setUnauthorizedResponse(context);
         } else {
-            id.asInt();
+            userId = id.asInt();
         }
         Claim name = hashMap.get("userName");
         String userName = "";
         if (name == null) {
             setUnauthorizedResponse(context);
         } else
-            name.asString();
+            userName = name.asString();
         UserEntity entity = UserEntity.builder()
                 .id(userId)
                 .userName(userName)
