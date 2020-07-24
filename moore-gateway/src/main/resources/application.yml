@@ -37,6 +37,8 @@ mybatis-plus:
       id-type: auto
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://49.235.208.185:8099/eureka/
