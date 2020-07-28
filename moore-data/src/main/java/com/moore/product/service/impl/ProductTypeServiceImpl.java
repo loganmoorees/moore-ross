@@ -37,6 +37,7 @@ public class ProductTypeServiceImpl implements ProductTypeService {
                     .isModify(e.getIsModify())
                     .finSeriesId(e.getFinSeriesId())
                     .isQuo(e.getIsQuo())
+                    .key(e.getName())
                     .matClass(e.getMatClass())
                     .build();
             menuVos.add(seriesVO);
@@ -59,6 +60,9 @@ public class ProductTypeServiceImpl implements ProductTypeService {
             List<SeriesEntity> seriesEntities = productTypeMapper.selectList(queryWrapper);
             if (seriesEntities.size() != 0) {
                 List<SeriesVo> list = BeanUtil.copyList(seriesEntities, SeriesVo.class);
+                list.forEach(d -> {
+                    d.setKey(d.getName());
+                });
                 e.setChildMenu(list);
                 getSonMenus(e.getChildMenu());
             }

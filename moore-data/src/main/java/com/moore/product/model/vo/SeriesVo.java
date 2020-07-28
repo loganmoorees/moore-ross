@@ -28,5 +28,7 @@ public class SeriesVo implements Serializable {
 
     private String matClass;
 
+    private String key;
+
     private List<SeriesVo> childMenu;
 }
