@@ -11,6 +11,7 @@
         <module>moore-data</module>
         <module>moore-common</module>
         <module>moore-gateway</module>
+        <module>moore-eureka-server</module>
     </modules>
     <packaging>pom</packaging>
 

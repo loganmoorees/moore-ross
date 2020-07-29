@@ -41,6 +41,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://49.235.208.185:8099/eureka/
+#      defaultZone: http://49.235.208.185:8099/eureka/
+      defaultZone: http://localhost:8099/eureka/
     fetch-registry: true
     register-with-eureka: true
