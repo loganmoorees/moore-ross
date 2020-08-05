@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.moore.common.utils.BeanUtil;
 import com.moore.product.mapper.ProductTypeMapper;
 import com.moore.product.model.entity.SeriesEntity;
+import com.moore.product.model.vo.SeriesTypeVo;
 import com.moore.product.model.vo.SeriesVo;
 import com.moore.product.service.ProductTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
