@@ -64,13 +64,6 @@ public class ProductTypeServiceImpl implements ProductTypeService {
                 list.forEach(d -> {
                     d.setKey(d.getName());
                 });
-                SeriesVo vo = SeriesVo.builder()
-                        .seriesId(e.getTreeId())
-                        .treeId("000")
-                        .name("新增节点")
-                        .key("新增节点")
-                        .build();
-                list.add(vo);
                 e.setChildMenu(list);
                 getSonMenus(e.getChildMenu());
             }
